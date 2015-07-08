@@ -1,1 +1,1 @@
-Heroku Thermostat Link: https://warm-gorge-2825.herokuapp.com/
+Heroku Thermostat Link: https://thermostat-javascript.herokuapp.com/
