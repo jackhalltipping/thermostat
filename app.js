@@ -25,3 +25,12 @@ $('#reset').click(function() {
 $('#powersaver').click(function() {
   thermostat.powerSave = !thermostat.powerSave;
 });
+
+$.getJSON('http://api.openweathermap.org/data/2.5/weather?lat=50&lon=0', function(data) {
+  getTemp = data.main.temp;
+  var temp=Math.round(getTemp - 272.15);
+  $('span#locationTemp').html(temp);
+});
+
+// return formatted address for lat/longitude - reverse geocoding with Google Maps API
+// adjust thermostat accordingly

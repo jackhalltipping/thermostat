@@ -4,7 +4,7 @@
   <meta charset="utf-8">
 
   <title>Thermostat</title>
-
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
   <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
   <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
 </head>
@@ -17,6 +17,13 @@
   <button type="reset"    id="reset">Reset</button>
 
   <input  type='checkbox' id='powersaver' value ="Power Saver" checked> Power Saver On
+
+  <p>
+
+  The temperature in <span id='location'></span> is: <span id="locationTemp"></span> ° Celcius
+</p>
+
+
 </body>
 
   <script type="text/javascript" src="javascripts/thermostat.js"></script>
