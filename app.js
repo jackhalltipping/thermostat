@@ -1,29 +1,27 @@
-thermostat = new Thermostat;
-
-document.getElementById("temperature").innerHTML = thermostat.temp;
-
-document.getElementById("up").addEventListener("click",  function() {
-  thermostat.increase();
-  document.getElementById("temperature").innerHTML = thermostat.temp;
-  changeColour();
-  });
-
-document.getElementById("down").addEventListener("click", function() {
-  thermostat.decrease();
-  document.getElementById("temperature").innerHTML = thermostat.temp;
-  changeColour();
-});
-
-document.getElementById("reset").addEventListener("click", function() {
-  thermostat.resetTemp();
-  document.getElementById("temperature").innerHTML = thermostat.temp;
-  changeColour();
-});
-
-document.getElementById('powersaver').addEventListener("click", function() {
-  thermostat.powerSave = !thermostat.powerSave;
-});
-
-var changeColour = function() {
+var updateDisplay = function() {
+  document.getElementById('temperature').innerHTML   = thermostat.temp;
   document.getElementById('temperature').style.color = thermostat.colour;
 };
+
+thermostat = new Thermostat;
+updateDisplay(); // window.onload ...?
+
+// if you can add multiple event listeners at the same time, add up-arrow.
+document.getElementById('up').addEventListener('click',  function() {
+  thermostat.increase();
+  updateDisplay();
+});
+
+document.getElementById('down').addEventListener('click', function() {
+  thermostat.decrease();
+  updateDisplay();
+});
+
+document.getElementById('reset').addEventListener('click', function() {
+  thermostat.resetTemp();
+  updateDisplay();
+});
+
+document.getElementById('powersaver').addEventListener('click', function() {
+  thermostat.powerSave = !thermostat.powerSave;
+});
