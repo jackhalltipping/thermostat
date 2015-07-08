@@ -7,21 +7,21 @@ thermostat = new Thermostat();
 updateDisplay(); // window.onload ...?
 
 // if you can add multiple event listeners at the same time, add up-arrow.
-document.getElementById('up').addEventListener('click',  function() {
+$('#up').click(function() {
   thermostat.increase();
   updateDisplay();
 });
 
-document.getElementById('down').addEventListener('click', function() {
+$('#down').click(function() {
   thermostat.decrease();
   updateDisplay();
 });
 
-document.getElementById('reset').addEventListener('click', function() {
+$('#reset').click(function() {
   thermostat.resetTemp();
   updateDisplay();
 });
 
-document.getElementById('powersaver').addEventListener('click', function() {
+$('#powersaver').click(function() {
   thermostat.powerSave = !thermostat.powerSave;
 });
