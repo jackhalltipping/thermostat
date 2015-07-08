@@ -3,7 +3,7 @@ var updateDisplay = function() {
   document.getElementById('temperature').style.color = thermostat.colour;
 };
 
-thermostat = new Thermostat;
+thermostat = new Thermostat();
 updateDisplay(); // window.onload ...?
 
 // if you can add multiple event listeners at the same time, add up-arrow.
