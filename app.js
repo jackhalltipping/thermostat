@@ -1,6 +1,6 @@
 var updateDisplay = function() {
-  document.getElementById('temperature').innerHTML   = thermostat.temp;
-  document.getElementById('temperature').style.color = thermostat.colour;
+  $('#temperature').html(thermostat.temp);
+  $('#temperature').style.color = thermostat.colour;
 };
 
 thermostat = new Thermostat();
