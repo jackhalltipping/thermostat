@@ -4,19 +4,20 @@ var latitude;
 var longitude;
 
 navigator.geolocation.getCurrentPosition(GetLocation);
-
 function GetLocation(location) {
-    console.log(location)
-    latitude = location.coords.latitude;
-    longitude = location.coords.longitude;
+    latitiude = (location.coords.latitude);
+    longitude = (location.coords.longitude);
+    getAddress(latitiude, longitude);
 }
+
 //
 // var coords = variable.split(',', 2);
 // var lat  = parseFloat(coords[0]);
 // var long = parseFloat(coords[1]);
 
-geocoder = new google.maps.Geocoder();
-geocoder.geocode({'latLng': new google.maps.LatLng(latitude, longitude) }, function(results, status) {
-  console.log(results[0]);
-  $('span#location').html(results[0].formatted_address);
-});
+function getAddress(latitude, longitude) {
+  geocoder = new google.maps.Geocoder();
+  geocoder.geocode({'latLng': new google.maps.LatLng(latitiude, longitude) }, function(results, status) {
+    $('span#location').html(results[0].formatted_address);
+  });
+}
