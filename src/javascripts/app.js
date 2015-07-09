@@ -26,7 +26,7 @@ $('#powerSaveMode').click(function() {
   updateDisplay();
 });
 
-$.getJSON('https://api.openweathermap.org/data/2.5/weather?lat=51.51758&lon=-0.073789', function(data) {
+$.getJSON('http://api.openweathermap.org/data/2.5/weather?lat=51.51758&lon=-0.073789', function(data) {
   getTemp = data.main.temp;
   var temp=Math.round(getTemp - 272.15);
   $('span#locationTemp').html(temp);
