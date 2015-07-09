@@ -1,6 +1,6 @@
 <h1>Link to app: </h1> http://thermostat-javascript.herokuapp.com/
 
-Technologies used:
+Technologies used: <br>
 -Javascript <br>
 -jQuery <br>
 -jasmine <br>
