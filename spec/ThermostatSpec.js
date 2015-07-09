@@ -26,7 +26,7 @@ describe('Thermostat', function() {
   });
 
   it('has powerSave mode on by default', function() {
-    expect(thermostat.powerSave).toBe(true);
+    expect(thermostat.powerSaveMode).toBe(true);
   });
 
   it('has a maximum temperature of 25 when powerSave mode is on', function() {
@@ -37,7 +37,7 @@ describe('Thermostat', function() {
   });
 
   it('has a maximum temperature of 32 when powerSave mode is off', function() {
-    thermostat.powerSave = false;
+    thermostat.powerSaveMode = false;
     for (i=0; i < 15; i++) {
       thermostat.increase();
     }
@@ -47,6 +47,15 @@ describe('Thermostat', function() {
   it('can be reset to 20', function() {
     thermostat.increase();
     thermostat.resetTemp();
+    expect(thermostat.temp).toBe(20);
+  });
+
+  it('automatically resets to 20 if powersave mode is turn on when above 25', function() {
+    thermostat.powerSaveMode = false;
+    for (i=0; i < 15; i++) {
+      thermostat.increase();
+    }
+    thermostat.changeMode();
     expect(thermostat.temp).toBe(20);
   });
 
