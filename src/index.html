@@ -6,25 +6,45 @@
   <title>Thermostat</title>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
   <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-  <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+  <link rel="stylesheet" type="text/css" href="/src/stylesheets/index.css">
 </head>
 
+
+
 <body>
-  <div id="temperature"></div>
 
-  <button type="button"   id="up"   >Up</button>
-  <button type="button"   id="down" >Down</button>
-  <button type="reset"    id="reset">Reset</button>
+  <h1> Welcome to Thermostat! </h1>
 
-  <input  type='checkbox' id='powersaver' value ="Power Saver" checked> Power Saver On
+  <div id="thermostat">
+    <div id="temp">
+      <p><div id="temperature"> </div>&#8451;</p>
+    </div>
 
-  <p>
+    <p>
+      <div id="changesTemperature">
+        <input id="up" type="submit" value="&uarr;" />
+        <input id="down" type="submit" value="&darr;" />
+      </div>
+      <div id="powerSave">
+        Power save mode <input id="powerSaveMode" type="checkbox" checked/>
+      </div>
+    </p>
 
-  The temperature in <span id='location'></span> is: <span id="locationTemp"></span> ° Celcius
-</p>
+    <p>
+      <input id="reset" type="submit" value="Reset" />
+    </p>
 
+    <div id="place">
+      The temperature near <span id='location'></span> is: <span id="locationTemp"></span> ° Celcius
+    </div>
+
+  </div>
+
+  <div id="footer">By Jack Hall-Tipping (with help from pair partners this week:
+     Theo, Nicola, and Natalie!)</div>
 
 </body>
+
 
   <script type="text/javascript" src="javascripts/thermostat.js"></script>
   <script type="text/javascript" src="javascripts/app.js"></script>
