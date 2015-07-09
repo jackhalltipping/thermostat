@@ -3,4 +3,4 @@ Link to app: http://thermostat-javascript.herokuapp.com/
 Technologies used:
 Javascript, jQuery, jasmine, html, css, php, openWeather API, Google Maps API.
 
-![sample](./images/sample/.png)
+![sample](../images/sample/.png)
