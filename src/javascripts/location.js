@@ -1,5 +1,3 @@
-// latitude, longitude =
-
 var latitude;
 var longitude;
 
@@ -9,11 +7,6 @@ function GetLocation(location) {
     longitude = (location.coords.longitude);
     getAddress(latitude, longitude);
 }
-
-//
-// var coords = variable.split(',', 2);
-// var lat  = parseFloat(coords[0]);
-// var long = parseFloat(coords[1]);
 
 function getAddress(latitude, longitude) {
   geocoder = new google.maps.Geocoder();

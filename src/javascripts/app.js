@@ -4,9 +4,8 @@ var updateDisplay = function() {
 };
 
 thermostat = new Thermostat();
-updateDisplay(); // window.onload ...?
+updateDisplay();
 
-// if you can add multiple event listeners at the same time, add up-arrow.
 $('#up').click(function() {
   thermostat.increase();
   updateDisplay();
@@ -32,6 +31,3 @@ $.getJSON('http://api.openweathermap.org/data/2.5/weather?lat=51.51758&lon=-0.07
   var temp=Math.round(getTemp - 272.15);
   $('span#locationTemp').html(temp);
 });
-
-// return formatted address for lat/longitude - reverse geocoding with Google Maps API
-// adjust thermostat accordingly

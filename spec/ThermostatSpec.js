@@ -1,5 +1,5 @@
 describe('Thermostat', function() {
-  var thermostat; // do you need to do this?
+  var thermostat;
 
   beforeEach(function() {
     thermostat = new Thermostat();
@@ -50,7 +50,7 @@ describe('Thermostat', function() {
     expect(thermostat.temp).toBe(20);
   });
 
-  it('automatically resets to 20 if powersave mode is turn on when above 25', function() {
+  it('automatically resets to 20 if powersave mode is turned on when above 25', function() {
     thermostat.powerSaveMode = false;
     for (i=0; i < 15; i++) {
       thermostat.increase();
