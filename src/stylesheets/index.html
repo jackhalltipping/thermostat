@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="src/Thermostat.js"></script>
+  <link rel="stylesheet" href="./public/css/stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+  <div id="thermostat">
+    <div id="temp">
+      <p><div id="temperature"> </div>&#8451;</p>
+    </div>
+
+    <p>
+      <div id="changesTemperature">
+        <input id="up" type="submit" value="&uarr;" />
+        <input id="down" type="submit" value="&darr;" />
+      </div>
+      <div id="powerSave">
+        Power save mode <input id="powerSaveMode" type="checkbox" checked/>
+      </div>
+    </p>
+
+    <p>
+      <input id="reset" type="submit" value="Reset" />
+    </p>
+
+  </div>
+
+</body>
+
+<script type="text/javascript" src="src/app.js" ></script>
+
+</html>
