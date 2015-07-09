@@ -24,6 +24,7 @@ $('#reset').click(function() {
 
 $('#powerSaveMode').click(function() {
   thermostat.changeMode();
+  updateDisplay();
 });
 
 $.getJSON('http://api.openweathermap.org/data/2.5/weather?lat=51.51758&lon=-0.073789', function(data) {
