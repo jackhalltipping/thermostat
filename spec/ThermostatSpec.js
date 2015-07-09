@@ -50,13 +50,13 @@ describe('Thermostat', function() {
     expect(thermostat.temp).toBe(20);
   });
 
-  it('automatically resets to 20 if powersave mode is turned on when above 25', function() {
+  it('automatically resets to 25 if powersave mode is turned on when above 25', function() {
     thermostat.powerSaveMode = false;
     for (i=0; i < 15; i++) {
       thermostat.increase();
     }
     thermostat.changeMode();
-    expect(thermostat.temp).toBe(20);
+    expect(thermostat.temp).toBe(25);
   });
 
   it('returns "green" when the temperature is below 18', function() {

@@ -40,7 +40,7 @@ function Thermostat() {
   Thermostat.prototype.changeMode = function () {
     this.powerSaveMode = !this.powerSaveMode;
     if (this.temp > 25) {
-      this.resetTemp();
+      this.temp = 25;
     }
   };
 
