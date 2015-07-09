@@ -4,10 +4,10 @@ function Thermostat() {
   this.colour    = 'yellow';
 
   Thermostat.prototype.increase = function() {
-    if (this.powerSave && this.temp < 25) {
+    if (this.powerSaveMode && this.temp < 25) {
       this.temp += 1;
     }
-    if (!this.powerSave && this.temp < 32) {
+    if (!this.powerSaveMode && this.temp < 32) {
       this.temp += 1;
     }
     this.setColour();
